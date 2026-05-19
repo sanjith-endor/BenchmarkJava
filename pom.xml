@@ -1181,7 +1181,7 @@
 
                         <!-- apply a specific flavor of google-java-format -->
                         <googleJavaFormat>
-                            <version>1.17.0</version>
+                            <version>1.35.0</version>
                             <style>AOSP</style>
                         </googleJavaFormat>
                     </java>
@@ -1258,8 +1258,8 @@
         <version.apache.api-ldap>2.1.7</version.apache.api-ldap>
         <version.apacheds>2.0.0.AM27</version.apacheds>
         <version.fluido>2.1.0</version.fluido>
-        <!-- hibernate is up to rev 6+. But 4.0.0. causes this error: symbol: org.hibernate.classic.Session not found -->
-        <version.hibernate>3.6.10.Final</version.hibernate>
+        <!-- 5.3.15.Final brings dom4j 2.1.1 transitively. Newer 5.3.x (>=5.3.20) ships dom4j 2.1.3; 5.4+ also 2.1.3. -->
+        <version.hibernate>5.3.15.Final</version.hibernate>
         <version.spotbugs.maven>4.9.8.3</version.spotbugs.maven>
         <version.spotbugs>4.9.8</version.spotbugs>
         <!-- Spring 6.x requires Java 17 -->

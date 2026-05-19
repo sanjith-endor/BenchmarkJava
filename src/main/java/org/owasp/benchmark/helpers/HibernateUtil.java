@@ -27,18 +27,19 @@ import java.util.List;
 import java.util.logging.Level;
 import javax.imageio.spi.ServiceRegistry;
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.owasp.benchmark.helpers.entities.Certificate;
 import org.owasp.benchmark.helpers.entities.Employee;
 import org.owasp.benchmark.helpers.entities.Hobby;
 import org.owasp.benchmark.helpers.entities.User;
 
 public class HibernateUtil {
-    org.hibernate.Session session;
-    org.hibernate.classic.Session classicSession;
+    Session session;
+    Session classicSession;
     Statement st;
     SessionFactory sessionFactory;
     ServiceRegistry serviceRegistry;
@@ -83,7 +84,7 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public org.hibernate.Session getSession() {
+    public Session getSession() {
         return session;
     }
 
@@ -100,7 +101,7 @@ public class HibernateUtil {
         // StandardServiceRegistryBuilder.destroy(serviceRegistry);
     }
 
-    public org.hibernate.classic.Session getClassicSession() {
+    public Session getClassicSession() {
         return classicSession;
     }
 
